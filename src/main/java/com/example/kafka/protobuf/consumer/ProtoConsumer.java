@@ -55,7 +55,7 @@ public class ProtoConsumer {
                     OtherMessage om = (OtherMessage) record.value();
                     System.out.println("Received OtherMessage (specific support) " + om);
                 } else {
-                    System.out.println("Received Message (no specific support)");
+                    System.out.println("Received Message (handling using DynamicMessage)");
                     for (FieldDescriptor field : record.value().getAllFields().keySet()) {
                         System.out.println(field.getName() + ": " + record.value().getField(field));
                     }
