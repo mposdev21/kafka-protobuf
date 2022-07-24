@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.example.protobuf;
+
+import "google/protobuf/timestamp.proto";
+import "other.proto";
+option java_outer_classname = "BasicProtos";
+
+message SimpleMessage {
+	int32 index = 1;
+    google.protobuf.Timestamp tstamp = 2;
+}
+
+message BasicMessage {
+    repeated SimpleMessage simple = 1;
+    OtherMessage other = 3;
+}

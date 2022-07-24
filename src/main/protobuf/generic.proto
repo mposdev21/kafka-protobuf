@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.example.protobuf;
+
+option java_outer_classname = "GenericProtos";
+
+message GenericMessage {
+    string name = 1;
+}

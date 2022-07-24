@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.example.protobuf;
+
+option java_outer_classname = "OtherProtos";
+
+message OtherMessage {
+    string name = 1;
+	int32 record = 2;
+}
